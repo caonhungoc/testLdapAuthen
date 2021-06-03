@@ -33,7 +33,7 @@ function authenticateDN(username, password) {
 }
 
 /*use this to add user*/
-function addUser() {
+function addUser() { // need admin authentication
     var entry = {
         sn: 'bar',
         objectclass: 'inetOrgPerson'
@@ -80,7 +80,7 @@ function searchUser() {
         }
     });
 }
-// searchUser();
+// searchUser(); // can search without authenticating
 // authen
 // client.bind('cn=ngoc,ou=People,dc=maxcrc,dc=com', 'pwd', (err) => {
 //     if(err) console.log(err);
@@ -99,36 +99,3 @@ function searchUser() {
 
 //     }
 // });
-
-// client.bind('dc=maxcrc,dc=com', '_Pass1234_', (err) => {
-//     if(err) console.log(err);
-//     else {
-//         console.log("success for root, and add user")
-//         // const entry = {
-//         //     sn: 'cao',
-//         //     objectclass: 'inetOrgPerson'
-//         //   };
-//         //   client.add('cn=ngan,ou=People,dc=maxcrc,dc=com', entry, (err) => {
-//         //     if(err) console.log(err);
-//         //     else {
-//         //         console.log("success")
-//         //     }
-//         //   });
-
-//     }
-// });
-
-
-
-
-
-// const entry = {
-//     sn: 'cao',
-//     objectclass: 'inetOrgPerson'
-//   };
-//   client.add('cn=ngan,ou=People,dc=maxcrc,dc=com', entry, (err) => {
-//     if(err) console.log(err);
-//     else {
-//         console.log("success")
-//     }
-//   });
